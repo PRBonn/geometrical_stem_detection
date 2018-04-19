@@ -1,0 +1,23 @@
+<launch>
+  <!-- Launch Bagfile with data -->
+  <arg name="bagfile" default="$(find piros_stemdet)/example/example.bag" />
+  <node pkg="rosbag" type="play" name="images" args="$(arg bagfile)" />
+
+
+  <!-- Launch ROS Node for Segmentation -->
+  <node pkg="piros_vegsec" type="piros_vegsec_node" name="piros_vegsec_node" output="screen">
+    <rosparam command="load" file="$(find piros_vegsec)/config/piros_vegsec.yaml" />
+  </node>
+
+
+  <!-- Launch ROS Node for Stem detection-->
+  <node pkg="piros_stemdet" type="stemdetection_node" name="stemdetection_node" output="screen">
+    <rosparam command="load" file="$(find piros_stemdet)/config/stemdetection_default.yaml" />
+  </node>
+
+
+<!-- Launch ROS Node to Echo Stems-->
+  <node pkg="piros_stemdet" type="stemecho_node" name="stemecho_node" output="screen">
+    <rosparam command="load" file="$(find piros_stemdet)/config/stemecho_default.yaml" />
+  </node>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="piros_vegsec" type="piros_vegsec_node" name="piros_vegsec_node">
+    <rosparam command="load" file="$(find piros_vegsec)/config/piros_vegsec.yaml" />
+  </node>
+</launch>

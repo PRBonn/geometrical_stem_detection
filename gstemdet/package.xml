@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gstemdet</name>
+  <version>0.1.0</version>
+  <description>Stem Detection for M26-PIROS Uni-Bonn</description>
+  <maintainer email="ferdinand@uni-bonn.de">Ferdinand Langer</maintainer>
+  <maintainer email="mandtler@uni-bonn.de">Leonard Mandtler</maintainer>
+  <license>BSD</license>
+  <url type="website">git@gitlab.ipb.uni-bonn.de:amilioto/ros-intro.git</url>
+  <author email="ferdinand@uni-bonn.de">Ferdinand Langer</author>
+  <author email="mandtler@uni-bonn.de">Leonard Mandtler</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

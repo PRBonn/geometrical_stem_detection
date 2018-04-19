@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>piros_vegsec</name>
+  <version>0.1.0</version>
+  <description>Vegetation Segmentation node for M26-PIROS Uni-Bonn</description>
+  <maintainer email="amilioto@uni-bonn.de">Andres Milioto</maintainer>
+  <license>BSD</license>
+  <url type="website">https://gitlab.ipb.uni-bonn.de/amilioto/m26_piros_vegsec</url>
+  <author email="amilioto@uni-bonn.de">Andres Milioto</author>
+  
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>message_filters</depend>
+
+  <test_depend>rosunit</test_depend>
+
+</package>

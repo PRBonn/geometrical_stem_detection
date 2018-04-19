@@ -1,0 +1,14 @@
+# inputs
+in_mask: /piros_vegsec/mask
+in_rgb: /image_rgb
+in_nir: /image_nir
+
+# outputs
+out_mask: /piros_stemdet/mask
+out_stem: /piros_stemdet/stem
+
+# Size of closing operator
+closing_size: 6
+
+# verbose = 0: No Text Output; verbose = 1: little Text Output; verbose = 2: visual output
+verbose: 2

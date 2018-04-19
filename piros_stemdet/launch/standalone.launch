@@ -1,0 +1,11 @@
+<launch>
+  <!-- Launch ROS Node for Stem detection-->
+  <node pkg="piros_stemdet" type="stemdetection_node" name="stemdetection_node" output="screen">
+    <rosparam command="load" file="$(find piros_stemdet)/config/stemdetection_default.yaml" />
+  </node>
+
+  <!-- Launch ROS Node to Echo Stems-->
+  <node pkg="piros_stemdet" type="stemecho_node" name="stemecho_node" output="screen">
+    <rosparam command="load" file="$(find piros_stemdet)/config/stemecho_default.yaml" />
+  </node>
+</launch>

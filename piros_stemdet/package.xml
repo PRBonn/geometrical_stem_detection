@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>piros_stemdet</name>
+  <version>0.1.0</version>
+  <description>ROS Wrapper for Geometric Stem Detection</description>
+  <maintainer email="ferdinand@uni-bonn.de">Ferdinand Langer</maintainer>
+  <maintainer email="mandtler@uni-bonn.de"> Leonard Mandtler</maintainer>
+  <license>BSD</license>
+  <url type="website">git@gitlab.ipb.uni-bonn.de:amilioto/ros-intro.git</url>
+  <author email="ferdinand@uni-bonn.de">Ferdinand Langer</author>
+  <author email="mandtler@uni-bonn.de"> Leonard Mandtler</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>roscpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>image_transport</depend>
+  <depend>cv_bridge</depend>
+  <depend>gstemdet</depend>
+
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+  <test_depend>rosunit</test_depend>
+
+</package>
