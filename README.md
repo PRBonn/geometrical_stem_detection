@@ -7,9 +7,11 @@ The program allows to identify, in real-time, the stems of sugarbeets using a to
 The idea is to first detect the leaves of the plant using a geometrical approach.
 The stem is then derived out of the intersection of all leaf directions.
 
+![Approach](approach.png)
+
 ## Key contributors
 
-* Ferdinand Langer (langer@uni-bonn.de)
+* Ferdinand Langer (ferdinand.langer@uni-bonn.de)
 * Leonard Mandtler (mandtler@uni-bonn.de)
 
 ## Related publications
