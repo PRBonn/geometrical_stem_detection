@@ -17,7 +17,7 @@ find_package(catkin REQUIRED
 )
 
 ## find OpenCV packages
-find_package(OpenCV 3 REQUIRED)
+find_package(OpenCV 4 REQUIRED)
 
 # adding custom messages
 add_message_files(DIRECTORY msg FILES Stem.msg Stems.msg)

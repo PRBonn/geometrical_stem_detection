@@ -4,7 +4,7 @@ project(gstemdet)
 ## Find catkin macros and libraries
 find_package(catkin REQUIRED)
 find_package(Boost REQUIRED COMPONENTS filesystem)
-find_package(OpenCV 3 REQUIRED)
+find_package(OpenCV 4 REQUIRED)
 find_package(yaml-cpp REQUIRED)
 ###################################
 ## catkin specific configuration ##
