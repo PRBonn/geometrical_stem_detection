@@ -23,7 +23,7 @@ void Algorithm::readRGBMask(const std::string &path) {
 #ifdef DEBUG_MODE
   std::cout << file_path << std::endl;
 #endif
-  cv::Mat image = cv::imread(file_path, CV_LOAD_IMAGE_GRAYSCALE);
+  cv::Mat image = cv::imread(file_path, cv::IMREAD_GRAYSCALE);
 
   // find orange masked image parts
   // cv::Scalar gray = cv::Scalar(200,200,200);
@@ -70,7 +70,7 @@ void Algorithm::extractPlants(const int &mode, const int &method) {
   for (unsigned int i = 0; i < _contours.size(); ++i) {
     cv::Mat just_one_contour = cv::Mat::zeros(_mask.rows, _mask.cols, CV_8U);
     drawContours(just_one_contour, _contours, i, cv::Scalar(255, 255, 255),
-                 CV_FILLED, 8, hierarchy);
+                 cv::FILLED, 8, hierarchy);
 
     // center of mass
     cv::Moments m = cv::moments(just_one_contour, true);
@@ -138,7 +138,7 @@ void Algorithm::LeavesWithConvexHull(const std::string &path,
   // readMask(path);
   readRGBMask(path + mask_path);
   close(m);
-  extractPlants(cv::RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+  extractPlants(cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 
 #ifdef DEBUG_MODE
   printResults();
@@ -165,7 +165,7 @@ void Algorithm::LeavesWithConvexHull(const cv::Mat &mask, const int m) {
   _plants.clear();
   _mask = mask;
   close(m);
-  extractPlants(cv::RETR_TREE, CV_CHAIN_APPROX_SIMPLE);
+  extractPlants(cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE);
 }
 
 void Algorithm::readYAML(const std::string &file_path) {
